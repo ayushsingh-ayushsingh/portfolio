@@ -10,13 +10,19 @@ export function Navbar() {
                     <Button variant="link" className="font-bold text-lg hover:cursor-pointer">AYUSH</Button>
                 </li>
                 <li>
-                    <Button variant="link" className="text-lg font-normal hover:cursor-pointer text-muted-foreground">About</Button>
+                    <a href="https://www.github.com/ayushsingh-ayushsingh" target="_blank" rel="noopener noreferrer">
+                        <Button variant="link" className="text-lg font-normal hover:cursor-pointer text-muted-foreground">About</Button>
+                    </a>
                 </li>
                 <li>
-                    <Button variant="link" className="text-lg font-normal hover:cursor-pointer text-muted-foreground">Contact</Button>
+                    <a href="mailto:ayushpno@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <Button variant="link" className="text-lg font-normal hover:cursor-pointer text-muted-foreground">Contact</Button>
+                    </a>
                 </li>
                 <li>
-                    <Button variant="link" className="text-lg font-normal hover:cursor-pointer text-muted-foreground">Projects</Button>
+                    <a href="https://www.github.com/ayushsingh-ayushsingh?tab=repositories" target="_blank" rel="noopener noreferrer">
+                        <Button variant="link" className="text-lg font-normal hover:cursor-pointer text-muted-foreground">Projects</Button>
+                    </a>
                 </li>
             </ul>
         </nav>

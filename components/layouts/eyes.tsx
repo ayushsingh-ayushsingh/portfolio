@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 const TrackingEyes: React.FC = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -20,7 +20,7 @@ const TrackingEyes: React.FC = () => {
         };
     }, []);
 
-    const calculatePupilPosition = (eye: HTMLDivElement | null) => {
+    const calculatePupilPosition = useCallback((eye: HTMLDivElement | null) => {
         if (!eye) return { x: 0, y: 0 };
 
         const rect = eye.getBoundingClientRect();
@@ -44,7 +44,7 @@ const TrackingEyes: React.FC = () => {
             x: distance * Math.cos(angle),
             y: distance * Math.sin(angle),
         };
-    };
+    }, [mousePosition]);
 
     useEffect(() => {
         let animationFrameId: number;
@@ -74,7 +74,7 @@ const TrackingEyes: React.FC = () => {
 
         animate();
         return () => cancelAnimationFrame(animationFrameId);
-    }, [mousePosition]);
+    }, [mousePosition, calculatePupilPosition]);
 
     const eyeStyle: React.CSSProperties = {
         position: 'relative',
