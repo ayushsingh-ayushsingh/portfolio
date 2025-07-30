@@ -96,13 +96,14 @@ export function Education() {
                                     <div className="flex justify-between items-center">
                                         <div className="text-lg font-semibold">We Win Limited, Bhopal</div>
                                         <span className="text-md text-muted-foreground flex items-center gap-1">
-                                            <CircleDot className="w-4 h-4 text-yellow-400 mr-1" strokeWidth={5} />
-                                            Working
+                                            {/* <CircleDot className="w-4 h-4 text-yellow-400 mr-1" strokeWidth={5} /> */}
+                                            <Check className="w-4 h-4 text-green-500 mr-1" strokeWidth={5} />
+                                            Completed
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <div className="text-md text-muted-foreground">Intern - React Developer</div>
-                                        <span className="text-md text-muted-foreground">Apr &apos;25 - Present</span>
+                                        <span className="text-md text-muted-foreground">Apr &apos;25 - July &apos;25</span>
                                     </div>
                                 </li>
                             </ul>

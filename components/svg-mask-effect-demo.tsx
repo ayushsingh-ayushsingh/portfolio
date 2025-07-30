@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { Linux } from "@/components/layouts/skills";
-import Image from "next/image";
 
 export default function SVGMaskEffectDemo() {
     const [svgSize, setSvgSize] = useState(500);
@@ -60,7 +59,7 @@ export default function SVGMaskEffectDemo() {
                     ) : null}
                     {rickRolled ? (
                         <Link href="/">
-                            <Image
+                            <img
                                 src="/Rick-Roll.gif"
                                 alt="Rick Roll"
                                 width={100}

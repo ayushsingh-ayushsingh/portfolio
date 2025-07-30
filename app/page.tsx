@@ -22,7 +22,7 @@ export default function Home() {
           <div className="hidden lg:block">
             <Phone />
           </div>
-          <div className="h-[100vh] overflow-y-auto overflow-x-hidden">
+          <div className="h-[100vh] overflow-y-auto overflow-x-hidden scrollbar-hide">
             <Hero />
             <Skills />
             <Education />

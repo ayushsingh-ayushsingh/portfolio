@@ -34,7 +34,7 @@ export function HideAndSeek() {
         <div className="text-center text-sm text-muted-foreground fixed bottom-0 right-0 mb-4 mr-4">
             {isWideScreen && (
                 <Link href="/hide-and-seek" target="_blank">
-                    <Button variant="secondary" className="text-lg font-normal hover:cursor-pointer" onClick={() => setIsClicked(!isClicked)}>
+                    <Button variant="default" className="text-lg font-normal hover:cursor-pointer" onClick={() => setIsClicked(!isClicked)}>
                         Hide & Seek
                     </Button>
                 </Link>
@@ -81,10 +81,10 @@ export function DropdownMenuDemo() {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <div>
-                    <Button variant="secondary" className="hidden sm:flex text-lg font-normal hover:cursor-pointer">
+                    <Button variant="default" className="hidden sm:flex text-lg font-normal hover:cursor-pointer">
                         Bot <Bot className="ml-2" />
                     </Button>
-                    <Button variant="secondary" className="flex sm:hidden text-lg font-normal hover:cursor-pointer">
+                    <Button variant="default" className="flex sm:hidden text-lg font-normal hover:cursor-pointer">
                         <Bot />
                     </Button>
                 </div>

@@ -1,0 +1,5 @@
+name = "portfolio-nextjs"
+compatibility_date = "2025-07-23"
+
+[assets]
+directory = "./out"

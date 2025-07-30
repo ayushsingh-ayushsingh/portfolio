@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ayush Singh",
-  description: "I am a Full-Stack Web-Developer from the City if Lakes, Bhopal. I build full-stack web applications using Next.js and MERN stack and I specialise in frontend-development using React, Tailwind CSS.",
+  description: "I am a Full-Stack Web-Developer from the City if Lakes, Bhopal. I build full-stack web applications using Next.js and MERN stack and I specialise in frontend-development using React, Tailwind CSS, NextJS, ShadCN, and TypeScript.",
 };
 
 export default function RootLayout({

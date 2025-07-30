@@ -93,7 +93,7 @@ export function ThemeChanger() {
     return (
         <div className="fixed top-10 md:top-2 bg-background text-muted-foreground right-0 m-2 z-50 flex gap-2">
             <Button
-                variant="secondary"
+                variant="default"
                 className="text-lg font-normal hover:cursor-pointer"
                 onClick={toggleMode}
             >
@@ -107,7 +107,7 @@ export function ThemeChanger() {
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button
-                        variant="secondary"
+                        variant="default"
                         className="text-lg font-normal hover:cursor-pointer"
                     >
                         <PenTool className="w-6 h-6" />

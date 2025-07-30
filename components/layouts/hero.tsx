@@ -9,7 +9,6 @@ import Link from "next/link"
 import { MapPin } from "lucide-react";
 import { Separator } from "@/components/ui/separator"
 import { FlipWords } from "../ui/flip-words";
-import Image from "next/image";
 
 export function FlipHelloWords() {
     const words = [
@@ -41,14 +40,14 @@ export function Hero() {
             <div className="flex flex-col items-center justify-center w-full mb-20">
                 <div className="flex items-center justify-center w-full relative pt-24">
                     <div className="relative w-30 h-30">
-                        <Image
+                        <img
                             src="/AyushSingh.jpg"
                             alt="Ayush Singh"
                             width={100}
                             height={100}
                             className="w-full h-full rounded-full absolute transition-opacity ease-in-out saturate-120 brightness-110"
                         />
-                        <Image
+                        <img
                             src="/AyushGhibili.jpg"
                             alt="Ayush Ghibili"
                             width={100}
