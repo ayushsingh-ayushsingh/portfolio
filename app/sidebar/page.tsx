@@ -58,7 +58,7 @@ export default function Page() {
       </div>
       <meta
         name="description"
-        content="Vercel vs Cloudflare, deployment and DX"
+        content="Ayush Singh - Dev Portfolio"
       />
     </div>
   );
