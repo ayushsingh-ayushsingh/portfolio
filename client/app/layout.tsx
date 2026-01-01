@@ -22,21 +22,18 @@ const customFont = CustomFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ayush Singh - Dev Portfolio",
-  description:
-    "Portfolio Website of Ayush Singh, a Full-Stack Web Developer from India.",
-  applicationName: "Ayush Singh - Dev Portfolio",
+  title: "Ayush Singh - Full-Stack Developer",
+  description: "Full-Stack Web Developer from Bhopal, India.",
+  applicationName: "Ayush Singh - Full-Stack Developer",
   keywords:
     "Portfolio Ayush Singh Ayush AyushSingh ayush singh ayushsingh-ayushsingh",
   category: "Portfolio",
-  authors: [
-    { name: "Ayush Singh", url: "https://portfolio.ayushpno.workers.dev/" },
-  ],
+  authors: [{ name: "Ayush Singh", url: "https://me.ayushpno.workers.dev/" }],
   openGraph: {
     type: "profile",
-    title: "Ayush Singh - Developer",
+    title: "Ayush Singh - Full-Stack Developer",
     description: "Full-Stack Web Developer from Bhopal, India.",
-    siteName: "Ayush Singh - Developer",
+    siteName: "Ayush Singh - Full-Stack Developer",
     url: "https://me.ayushpno.workers.dev/",
     images: [
       {
@@ -53,6 +50,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="favicon" href="/favicon.ico" />
+      </head>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${customFont.className} antialiased`}

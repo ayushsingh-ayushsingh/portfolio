@@ -12,6 +12,7 @@ import Education from "@/components/layouts/portfolio/education";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import { Loader } from "lucide-react";
+import { Chatbot as Bot} from "@/components/layouts/portfolio/bot";
 
 const GithubContributions = dynamic(
   () => import("@/components/layouts/portfolio/github-contributions")
@@ -125,7 +126,7 @@ export default function Home() {
         <div className="p-1 border rounded-lg max-w-150 mx-auto w-full">
           <img
             src="/flex.png"
-            alt="Current biggest flex"
+            alt="Full score on lighthouse test"
             className="w-full border rounded-md saturate-120 dark:brightness-90"
             height={1080}
             width={1920}
@@ -153,6 +154,7 @@ export default function Home() {
         <br />
         The source code is available on GitHub.
       </div>
+      <Bot />
       <hr />
       <div className="w-full max-w-4xl mx-auto border-x text-right font-extralight px-4">
         &copy; Ayush Singh {new Date(Date.now()).getFullYear()}
