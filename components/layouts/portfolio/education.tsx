@@ -96,8 +96,9 @@ function Education() {
                 <div className="border p-1 rounded-lg overflow-hidden group">
                   <Image
                     src={item.image}
+                    // unoptimized
                     className="rounded-md object-cover object-center transition-transform duration-300 group-hover:scale-120 scale-110 dark:brightness-80"
-                    alt="image"
+                    alt={item.name}
                     height={540}
                     width={960}
                   />

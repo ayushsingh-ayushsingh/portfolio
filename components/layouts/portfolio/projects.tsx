@@ -12,10 +12,57 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const projects = [
+  {
+    name: "Theramin - Contactless Music",
+    href: "https://theramin.pages.dev/",
+    description:
+      "Create music using hand-pose ML model implementation in JS and WebGL.",
+    image: "/theramin.png",
+    technologies: [
+      "WebGL",
+      "Vite",
+      "React",
+      "Tailwind",
+      "Handpose",
+      "Machine Learning",
+    ],
+  },
+  {
+    name: "AI Persona Agent",
+    href: "https://github.com/ayushsingh-ayushsingh/anam-ai-persona",
+    description:
+      "Maya - An AI Persona that interacts with you, Anam AI integration in Vite + React.",
+    image: "/persona.png",
+    technologies: [
+      "React",
+      "Vite",
+      "ShadCN",
+      "Tailwind",
+      "Anam AI",
+      "Web-Sockets",
+    ],
+  },
+  {
+    name: "Multimodal Agent",
+    href: "https://github.com/ayushsingh-ayushsingh/multimodal-agent",
+    description:
+      "Mujlti-modal Voice Agent with function calling that can understand images, camera feed, screen content and users audio.",
+    image: "/livekit.png",
+    technologies: [
+      "Python",
+      "Langchain",
+      "Next.JS",
+      "Livekit",
+      "Agent",
+      "Web-Sockets",
+      "Multi-modal",
+      "Artificial Intelligence",
+    ],
+  },
   {
     name: "Monthly Progress Tracker",
     href: "https://mpr-pi.vercel.app",
@@ -133,7 +180,7 @@ function Projects() {
                   <Image
                     src={item.image}
                     className="rounded-md object-cover object-center transition-transform duration-300 group-hover:scale-120 scale-110 dark:brightness-80"
-                    alt="image"
+                    alt={item.name}
                     height={540}
                     width={960}
                   />

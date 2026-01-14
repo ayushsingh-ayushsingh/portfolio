@@ -54,21 +54,16 @@ const experiences = [
 ];
 
 function Experiences() {
-  const [value, setValue] = useState([0]);
+  const [value, setValue] = useState([-1]);
   return (
     <div className="mx-auto border-x w-full max-w-4xl">
-      <Accordion
-        className="w-full px-6"
-        value={value}
-        onValueChange={setValue}
-        defaultValue={[0]}
-      >
+      <Accordion className="w-full px-6" value={value} onValueChange={setValue}>
         {experiences.map((item, pos) => (
           <AccordionItem key={pos} value={pos}>
             <AccordionTrigger
               className={cn(
                 "text-xl font-light",
-                pos == value[0] && "font-semibold"
+                pos == value[0] && "font-semibold",
               )}
             >
               {item.name}
@@ -125,7 +120,7 @@ function Experiences() {
                   <Image
                     src={item.image}
                     className="rounded-md object-cover object-center transition-transform duration-300 group-hover:scale-120 scale-110 dark:brightness-80"
-                    alt="image"
+                    alt={item.name}
                     height={540}
                     width={960}
                   />

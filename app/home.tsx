@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PortfolioNavbar } from "@/components/layouts/portfolio/navbar";
 import { PortfolioHero } from "@/components/layouts/portfolio/portfolio-hero";
 import { Intro } from "@/components/layouts/portfolio/intro";
@@ -12,9 +13,10 @@ import Education from "@/components/layouts/portfolio/education";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import { Loader } from "lucide-react";
+import { Chatbot as Bot } from "@/components/layouts/portfolio/bot";
 
 const GithubContributions = dynamic(
-  () => import("@/components/layouts/portfolio/github-contributions")
+  () => import("@/components/layouts/portfolio/github-contributions"),
 );
 
 export function Texture({ height }: { height: string }) {
@@ -118,6 +120,23 @@ export default function Home() {
       </main>
       <Texture height="12" />
       <hr />
+      <div className="p-6 max-w-4xl mx-auto border-x">
+        <div className="mb-4 px-2 text-muted-foreground max-w-150 mx-auto w-full">
+          ./public/current_flex.png
+        </div>
+        <div className="p-1 border rounded-lg max-w-150 mx-auto w-full">
+          <Image
+            src="/flex.png"
+            alt="Full score on lighthouse test"
+            className="w-full border rounded-md saturate-120 dark:brightness-90"
+            height={1080}
+            width={1920}
+          />
+        </div>
+      </div>
+      <hr />
+      <Texture height="4" />
+      <hr />
       <div className="w-full max-w-4xl mx-auto border-x text-7xl text-center text-foreground/50 font-extralight p-2">
         Ayush Singh
       </div>
@@ -136,9 +155,10 @@ export default function Home() {
         <br />
         The source code is available on GitHub.
       </div>
+      <Bot />
       <hr />
       <div className="w-full max-w-4xl mx-auto border-x text-right font-extralight px-4">
-        &copy; Ayush Singh {new Date(Date.now()).getFullYear()}
+        &copy; Ayush Singh 2026
       </div>
       <hr />
       <div className="w-full max-w-4xl mx-auto border-x text-7xl text-center font-extralight p-8" />

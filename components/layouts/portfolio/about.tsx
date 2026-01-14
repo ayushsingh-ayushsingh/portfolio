@@ -1,4 +1,5 @@
 import { Code2Icon, Globe, Mail, MapPin, Mars, Phone } from "lucide-react";
+import Link from "next/link";
 
 export function AboutPortfolioPage() {
   return (
@@ -18,7 +19,7 @@ export function AboutPortfolioPage() {
               <MapPin size={18} className="text-muted-foreground" />
             </div>
           </div>
-          <div className="px-3">Bhopal, Madhya Pradesh, India</div>
+          <div className="px-3">Based in Bhopal, India</div>
         </div>
         <div className="flex items-center p-2">
           <div className="border p-0.5 rounded-lg">
@@ -26,7 +27,13 @@ export function AboutPortfolioPage() {
               <Globe size={18} className="text-muted-foreground" />
             </div>
           </div>
-          <div className="px-3">ayushsingh.dev</div>
+          <Link
+            href={"https://me.ayushpno.workers.dev/"}
+            target="_blank"
+            className="px-3"
+          >
+            me.ayushpno.workers.dev
+          </Link>
         </div>
         <div className="flex items-center p-2">
           <div className="border p-0.5 rounded-lg">
@@ -34,7 +41,9 @@ export function AboutPortfolioPage() {
               <Phone size={18} className="text-muted-foreground" />
             </div>
           </div>
-          <div className="px-3">+91 93011-27004</div>
+          <a href="tel:+919301127004" className="px-3" target="_blank">
+            +91 93011-27004
+          </a>
         </div>
         <div className="flex items-center p-2">
           <div className="border p-0.5 rounded-lg">
@@ -42,7 +51,9 @@ export function AboutPortfolioPage() {
               <Mail size={18} className="text-muted-foreground" />
             </div>
           </div>
-          <div className="px-3">ayushpno@gmail.com</div>
+          <a href="mailto:ayushpno@gmail.com" className="px-3" target="_blank">
+            ayushpno@gmail.com
+          </a>
         </div>
         <div className="flex items-center p-2">
           <div className="border p-0.5 rounded-lg">

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MaskContainer } from "./mask-container";
 import { Linux } from "./linux-tux";
 import { toast } from "sonner";
+import Image from "next/image";
 
 export default function SVGMaskEffectDemo() {
   const [svgSize, setSvgSize] = useState(500);
@@ -69,10 +70,12 @@ export default function SVGMaskEffectDemo() {
 
         {rickRolled && (
           <Link href="/">
-            <img
+            <Image
               src="/Rick-Roll.gif"
               alt="Rick Roll"
               className="h-full w-full object-cover"
+              width={512}
+              height={512}
             />
           </Link>
         )}

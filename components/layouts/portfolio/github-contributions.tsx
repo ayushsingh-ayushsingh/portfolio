@@ -3,16 +3,12 @@
 import { GithubGraph } from "@/components/ui/github";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { useEffect, useState } from "react";
-import { toast } from "sonner";
 
 function GithubContributions() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
-    setTimeout(() => {
-      toast.success("This page got lighthouse score of 100!");
-    }, 5000);
   }, []);
 
   if (isVisible) {

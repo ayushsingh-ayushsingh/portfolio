@@ -4,55 +4,20 @@ import { useState, useRef, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Bot, SendHorizontal } from "lucide-react";
-// import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Label } from "@/components/ui/label";
 import { getResponse } from "./groq_ai";
-
-// export function HideAndSeek() {
-//   const [isClicked, setIsClicked] = useState(false);
-//   const [isWideScreen, setIsWideScreen] = useState(false);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setIsWideScreen(window.innerWidth >= 1080);
-//     };
-
-//     handleResize();
-//     window.addEventListener("resize", handleResize);
-
-//     return () => {
-//       window.removeEventListener("resize", handleResize);
-//     };
-//   }, []);
-
-//   return (
-//     <div className="text-center text-sm text-muted-foreground fixed bottom-0 right-0 mb-4 mr-4">
-//       {isWideScreen && (
-//         <Link href="/hide-and-seek" target="_blank">
-//           <Button
-//             variant="outline"
-//             size={"sm"}
-//             className="text-lg font-normal hover:cursor-pointer bg-primary"
-//             onClick={() => setIsClicked(!isClicked)}
-//           >
-//             Hide & Seek
-//           </Button>
-//         </Link>
-//       )}
-//     </div>
-//   );
-// }
+import { Label } from "@/components/ui/label";
 
 export function MyBot() {
   const [question, setQuestion] = useState("");
   const [messages, setMessages] = useState<
     { sender: "user" | "bot"; text: string }[]
   >([]);
+
   const [loading, setLoading] = useState(false);
 
   const messageEndRef = useRef<HTMLDivElement>(null);
@@ -91,23 +56,16 @@ export function MyBot() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <>
-          <Button
-            variant="secondary"
-            size={"sm"}
-            className="hidden sm:flex text-sm font-normal hover:cursor-pointer"
-            aria-label="Ayush Singh's AI Bot"
-          >
-            Bot <Bot className="ml-1" strokeWidth={1.5} />
-          </Button>
-          <Button
-            variant="default"
-            className="flex sm:hidden text-lg font-normal hover:cursor-pointer"
-            aria-label="Ayush Singh's AI Bot"
-          >
-            <Bot />
-          </Button>
-        </>
+        <Button
+          variant="secondary"
+          size={"icon"}
+          className="border font-normal backdrop-blur-2xl hover:cursor-pointer"
+          aria-label="Ayush Singh's AI Bot"
+        >
+          <span className="flex text-sm font-normal hover:cursor-pointer">
+            <Bot className="ml-1" strokeWidth={1.5} />
+          </span>
+        </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-87.5 p-0 my-2 mx-4 rounded-lg border shadow-primary/15 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
         <div className="flex flex-col h-100">
@@ -136,9 +94,9 @@ export function MyBot() {
             <div ref={messageEndRef} />
           </div>
           <div className="border-t p-3 flex items-center gap-2">
-            {/* <Label>
+            <Label>
               <Bot size={24} />
-            </Label> */}
+            </Label>
             <Input
               type="text"
               placeholder="Ask anything"
@@ -158,7 +116,7 @@ export function MyBot() {
 }
 
 export function Chatbot() {
-  const [isWideScreen, setIsWideScreen] = useState(false);
+  const [, setIsWideScreen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -175,18 +133,7 @@ export function Chatbot() {
 
   return (
     <div>
-      {/* {isWideScreen && (
-        <div className="fixed bottom-12 right-0 mb-4 mr-4 text-center text-sm text-muted-foreground">
-          <MyBot />
-        </div>
-      )}
-      {!isWideScreen && (
-        <div className="fixed bottom-0 right-0 mb-4 mr-4 text-center text-sm text-muted-foreground">
-          <MyBot />
-        </div>
-      )} */}
-      {/* <HideAndSeek /> */}
-      <div className="fixed bottom-4 right-4 text-center text-sm text-muted-foreground">
+      <div className="fixed bottom-4 right-4 text-center text-muted-foreground">
         <MyBot />
       </div>
     </div>

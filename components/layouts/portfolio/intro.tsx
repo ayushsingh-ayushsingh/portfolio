@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Volume2 } from "@/components/animate-ui/icons/volume-2";
+import Image from "next/image";
 import { AnimateIcon } from "@/components/animate-ui/icons/icon";
 
 export function Intro() {
@@ -22,8 +23,22 @@ export function Intro() {
     <div className="max-w-4xl w-full mx-auto border-x flex px-4">
       <div className="border-x p-1">
         <div className="border rounded-full p-1">
-          <div className="size-36 md:size-48 flex text-6xl md:text-8xl text-chart-2 bg-chart-2/15 select-none items-center justify-center rounded-full border">
-            AS
+          <div className="size-36 md:size-48 flex text-6xl md:text-8xl text-chart-2 select-none items-center justify-center rounded-full border">
+            {/* AS */}
+            <Image
+              src="/me.png"
+              alt="Ayush Singh Avatar"
+              className="w-full h-full object-cover rounded-full pointer-events-none dark:hidden"
+              width={512}
+              height={512}
+            />
+            <Image
+              src="/me-dark-mode.png"
+              alt="Ayush Singh Avatar"
+              className="w-full h-full object-cover brightness-80 contrast-90 rounded-full pointer-events-none dark:block hidden saturate-70"
+              width={512}
+              height={512}
+            />
           </div>
         </div>
       </div>
